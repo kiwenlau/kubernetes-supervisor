@@ -22,7 +22,7 @@ ADD kubernetes.conf /etc/supervisor/conf.d/kubernetes.conf
 
 VOLUME /var/lib/docker
 
-CMD ["supervisord"]
+CMD ["supervisord", "-c", "/etc/supervisor/conf.d/kubernetes.conf"]
 
 # sudo docker build -t kiwenlau/kubernetes-shell:1.0.7 
 

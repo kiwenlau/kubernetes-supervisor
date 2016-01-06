@@ -9,8 +9,5 @@ docker rm -f kubernetes > /dev/null
 echo -e "\nstart kubernetes container, please wait for 10 seconds..."
 docker run -it -d --privileged --name=kubernetes --hostname=kubernetes kiwenlau/kubernetes-supervisor:1.0.7 >/dev/null
 
-# wait for kubenetes to setup
-sleep 10
-
 echo -e "\nget into kubernetes container\n"
 docker exec -it kubernetes bash
