@@ -2,7 +2,7 @@
 
 该项目中，我将kubernetes的所有组件：etcd, controller manager, apiserver, scheduler, kubelet, proxy以及docker daemon均运行在同一个Docker容器之中。
 
-容器启动时，各个组件由一个shell脚本启动。
+容器启动时，各个组件由一个supervisor启动。
 
 ![alt text](https://github.com/kiwenlau/kubernetes-supervisor/raw/master/kubernetes-supervisor.png)
 
@@ -11,14 +11,14 @@
 1.克隆GitHub仓库
 
 ```
-git clone https://github.com/kiwenlau/kubernetes-shell
-cd kubernetes-shell/
+git clone https://github.com/kiwenlau/kubernetes-supervisor
+cd kubernetes-supervisor/
 ```
 
 2.下载Docker镜像
 
 ```
-sudo docker pull kiwenlau/kubernetes-shell:1.0.7
+sudo docker pull kiwenlau/kubernetes-supervisor:1.0.7
 ```
 
 3.运行Kubernetes
